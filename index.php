@@ -29,33 +29,33 @@ if (isset($_REQUEST['tag']) && $_REQUEST['tag'] != '')
 	if ($tag=='events')
 	{  
        
-		$getevents=$db->getevents();
-		if($getevents)
+		$getevents1=$db->getevents1();
+		if($getevents1)
 		{
-			for($i=0;$i<count($getevents); $i++)
+			for($i=0;$i<count($getevents1); $i++)
 					{	
-					  foreach($getevents[$i] as $key => $value)
+					  foreach($getevents1[$i] as $key => $value)
 					  {
 						
 						if($key == "eventid")
 						{
-						$response["getevents"][$i]["eventid"] = $getevents[$i]["eventid"];
+						$response["getevents1"][$i]["eventid"] = $getevents1[$i]["eventid"];
 						}
 						if($key == "eventdescription")
 						{
-						$response["getevents"][$i]["eventdescription"] = $getevents[$i]["eventdescription"];
+						$response["getevents1"][$i]["eventdescription"] = $getevents1[$i]["eventdescription"];
 						}
 						if($key == "eventaddress")
 						{
-						$response["getevents"][$i]["eventaddress"] = $getevents[$i]["eventaddress"];
+						$response["getevents1"][$i]["eventaddress"] = $getevents1[$i]["eventaddress"];
 						}
 						if($key == "eventstartdate")
 						{
-						$response["getevents"][$i]["eventstartdate"] = $getevents[$i]["eventstartdate"];
+						$response["getevents1"][$i]["eventstartdate"] = $getevents1[$i]["eventstartdate"];
 						}
 						if($key == "eventstarttime")
 						{
-						$response["getevents"][$i]["eventstarttime"] = $getevents[$i]["eventstarttime"];
+						$response["getevents1"][$i]["eventstarttime"] = $getevents1[$i]["eventstarttime"];
 						}
 						
 					  }
